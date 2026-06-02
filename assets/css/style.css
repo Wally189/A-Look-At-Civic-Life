@@ -210,6 +210,43 @@ h3 { margin-top: 1.75rem; font-size: 1.25rem; }
 }
 .route-item p:last-child { margin-bottom: 0; }
 
+.civic-directory {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.civic-directory h3 {
+  margin: 1.75rem 0 .5rem;
+  padding-bottom: .35rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--burgundy);
+  font-size: 1.15rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+.directory-row {
+  display: grid;
+  grid-template-columns: minmax(11rem, 1.1fr) minmax(0, 2fr) minmax(7rem, .8fr);
+  gap: .75rem;
+  padding: .75rem 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+
+.directory-name {
+  font-weight: 700;
+}
+
+.directory-use {
+  color: #303437;
+}
+
+.directory-type {
+  color: var(--muted);
+  font-size: .92rem;
+}
+
 .ladder-guide { border-left: 4px solid var(--slate); }
 .ladder-guide h2 { margin-top: 0; }
 .ladder-layers {
@@ -342,6 +379,12 @@ th { background: #ece6d8; color: var(--slate-dark); }
   .week-grid,
   .method-grid,
   .route-list { grid-template-columns: 1fr; }
+  .directory-row {
+    display: block;
+    padding: .9rem 0;
+  }
+  .directory-use,
+  .directory-type { margin-top: .25rem; }
   .campaign-table-wrap { display: none; }
   .campaign-card-list { display: block; }
   .footer-grid { grid-template-columns: 1fr; }
