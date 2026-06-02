@@ -1,0 +1,79 @@
+[
+  {
+    "week": 0,
+    "title": "Project preparation",
+    "slug": "week-00-project-preparation",
+    "status": "Preparing",
+    "theme": "Preparation",
+    "reasonable_ask": "No external ask yet. Prepare the project calmly before public contact.",
+    "existing_workflow_checked": "Project method, task board and launch workflow",
+    "outcome": "In progress",
+    "url": "weeks/week-00-project-preparation/"
+  },
+  {
+    "week": 1,
+    "title": "Plain-English public documents",
+    "slug": "week-01-plain-english-public-documents",
+    "status": "Planned",
+    "theme": "Public documents",
+    "reasonable_ask": "Ask one public body to make one document easier to understand or explain the plain-English standard it uses.",
+    "existing_workflow_checked": "To be checked",
+    "outcome": "Not started",
+    "url": "weeks/week-01-plain-english-public-documents/"
+  },
+  {
+    "week": 2,
+    "title": "Decision ownership maps",
+    "slug": "week-02-decision-ownership-maps",
+    "status": "Planned",
+    "theme": "Accountability",
+    "reasonable_ask": "Ask for a clearer explanation of who owns a decision or public process.",
+    "existing_workflow_checked": "To be checked",
+    "outcome": "Not started",
+    "url": "weeks/week-02-decision-ownership-maps/"
+  },
+  {
+    "week": 3,
+    "title": "Honest consultation test",
+    "slug": "week-03-honest-consultation-test",
+    "status": "Planned",
+    "theme": "Consultation",
+    "reasonable_ask": "Ask a public body to say clearly what is fixed, open, constrained or undecided in a consultation.",
+    "existing_workflow_checked": "To be checked",
+    "outcome": "Not started",
+    "url": "weeks/week-03-honest-consultation-test/"
+  },
+  {
+    "week": 4,
+    "title": "Public-sector AI accountability",
+    "slug": "week-04-public-sector-ai-accountability",
+    "status": "Planned",
+    "theme": "AI and accountability",
+    "reasonable_ask": "Ask one relevant body to explain how it records, governs or discloses AI or automated decision-support use.",
+    "existing_workflow_checked": "To be checked",
+    "outcome": "Not started",
+    "url": "weeks/week-04-public-sector-ai-accountability/"
+  },
+  {
+    "week": 5,
+    "title": "How petitions actually work",
+    "slug": "week-05-how-petitions-actually-work",
+    "status": "Possible next",
+    "theme": "Citizen routes",
+    "reasonable_ask": "Explain one lawful petition route clearly and test whether it points citizens to the right next step.",
+    "existing_workflow_checked": "To be checked",
+    "outcome": "Not started",
+    "url": "weeks/week-05-how-petitions-actually-work/"
+  },
+  {
+    "week": 6,
+    "title": "Do our votes count fairly?",
+    "slug": "week-06-do-our-votes-count-fairly",
+    "status": "Possible next",
+    "theme": "Democracy and representation",
+    "reasonable_ask": "Ask a representative or candidate to state their position on whether Westminster elections should use a more proportional voting system.",
+    "existing_workflow_checked": "To be checked",
+    "outcome": "Not started",
+    "url": "weeks/week-06-do-our-votes-count-fairly/"
+  }
+]
