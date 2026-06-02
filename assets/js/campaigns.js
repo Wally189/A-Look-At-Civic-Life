@@ -4,6 +4,17 @@ async function loadJson(path) {
   return response.json();
 }
 
+function campaignLayer(week) {
+  if (week === 0) return 'Preparation';
+  if (week <= 8) return 'Readability and accountability';
+  if (week <= 16) return 'Public money and fair work';
+  if (week <= 24) return 'Health and public-service safety';
+  if (week <= 32) return 'Household survival';
+  if (week <= 40) return 'Housing';
+  if (week <= 48) return 'Transport, skills and local economy';
+  return 'Justice, resettlement and resilience';
+}
+
 function campaignRow(item) {
   return `
     <tr>
@@ -14,6 +25,20 @@ function campaignRow(item) {
       <td>${item.existing_workflow_checked}</td>
       <td>${item.outcome}</td>
     </tr>
+  `;
+}
+
+function campaignCard(item) {
+  return `
+    <article class="campaign-card">
+      <p class="campaign-card-week">Week ${item.week}</p>
+      <h2><a href="${item.url}">${item.title}</a></h2>
+      <p><strong>Layer:</strong> ${campaignLayer(Number(item.week))}</p>
+      <p><strong>Status:</strong> ${item.status}</p>
+      <p><strong>Reasonable ask:</strong><br>${item.reasonable_ask}</p>
+      <p><strong>Workflow:</strong> ${item.existing_workflow_checked}</p>
+      <p><strong>Outcome:</strong> ${item.outcome}</p>
+    </article>
   `;
 }
 
@@ -34,8 +59,9 @@ function logRow(item) {
 }
 
 async function renderCampaigns() {
-  const target = document.querySelector('[data-campaigns-table]');
-  if (!target) return;
+  const tableTarget = document.querySelector('[data-campaigns-table]');
+  const cardTarget = document.querySelector('[data-campaigns-cards]');
+  if (!tableTarget && !cardTarget) return;
 
   const count = document.querySelector('[data-campaigns-count]');
   const range = document.querySelector('[data-campaigns-range]');
@@ -50,15 +76,20 @@ async function renderCampaigns() {
     const end = Math.min(start + pageSize, campaigns.length);
     const visible = campaigns.slice(start, end);
 
-    target.innerHTML = visible.map(campaignRow).join('');
-    if (count) count.textContent = `${campaigns.length} weeks`;
+    if (tableTarget) tableTarget.innerHTML = visible.map(campaignRow).join('');
+    if (cardTarget) cardTarget.innerHTML = visible.map(campaignCard).join('');
+    if (count) count.textContent = `${campaigns.length} campaign weeks`;
     if (range) range.textContent = `Showing ${start + 1}–${end} of ${campaigns.length}`;
     if (previous) previous.disabled = currentPage === 0;
     if (next) next.disabled = currentPage >= totalPages - 1;
   }
 
   try {
-    const campaigns = await loadJson('data/campaigns.json');
+    const loadedCampaigns = await loadJson('data/campaigns.json');
+    const campaigns = loadedCampaigns
+      .filter((item) => Number(item.week) >= 0 && Number(item.week) <= 52)
+      .sort((a, b) => Number(a.week) - Number(b.week));
+
     renderPage(campaigns);
 
     if (previous) {
@@ -79,7 +110,8 @@ async function renderCampaigns() {
       });
     }
   } catch (error) {
-    target.innerHTML = `<tr><td colspan="6">Campaign tracker could not be loaded.</td></tr>`;
+    if (tableTarget) tableTarget.innerHTML = `<tr><td colspan="6">Campaign tracker could not be loaded.</td></tr>`;
+    if (cardTarget) cardTarget.innerHTML = `<article class="campaign-card"><p>Campaign tracker could not be loaded.</p></article>`;
   }
 }
 
