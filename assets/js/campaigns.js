@@ -36,9 +36,48 @@ function logRow(item) {
 async function renderCampaigns() {
   const target = document.querySelector('[data-campaigns-table]');
   if (!target) return;
+
+  const count = document.querySelector('[data-campaigns-count]');
+  const range = document.querySelector('[data-campaigns-range]');
+  const previous = document.querySelector('[data-campaigns-prev]');
+  const next = document.querySelector('[data-campaigns-next]');
+  const pageSize = 6;
+  let currentPage = 0;
+
+  function renderPage(campaigns) {
+    const totalPages = Math.ceil(campaigns.length / pageSize);
+    const start = currentPage * pageSize;
+    const end = Math.min(start + pageSize, campaigns.length);
+    const visible = campaigns.slice(start, end);
+
+    target.innerHTML = visible.map(campaignRow).join('');
+    if (count) count.textContent = `${campaigns.length} weeks`;
+    if (range) range.textContent = `Showing ${start + 1}–${end} of ${campaigns.length}`;
+    if (previous) previous.disabled = currentPage === 0;
+    if (next) next.disabled = currentPage >= totalPages - 1;
+  }
+
   try {
     const campaigns = await loadJson('data/campaigns.json');
-    target.innerHTML = campaigns.map(campaignRow).join('');
+    renderPage(campaigns);
+
+    if (previous) {
+      previous.addEventListener('click', () => {
+        if (currentPage > 0) {
+          currentPage -= 1;
+          renderPage(campaigns);
+        }
+      });
+    }
+
+    if (next) {
+      next.addEventListener('click', () => {
+        if ((currentPage + 1) * pageSize < campaigns.length) {
+          currentPage += 1;
+          renderPage(campaigns);
+        }
+      });
+    }
   } catch (error) {
     target.innerHTML = `<tr><td colspan="6">Campaign tracker could not be loaded.</td></tr>`;
   }
