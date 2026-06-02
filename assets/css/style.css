@@ -116,7 +116,8 @@ h3 { margin-top: 1.75rem; font-size: 1.25rem; }
 .about-article,
 .intro-note,
 .accountability-note,
-.week-article {
+.week-article,
+.method-page {
   max-width: 860px;
 }
 
@@ -172,7 +173,9 @@ h3 { margin-top: 1.75rem; font-size: 1.25rem; }
 .week-summary,
 .week-card,
 .ladder-guide,
-.campaign-card {
+.campaign-card,
+.method-card,
+.route-item {
   margin: 1.25rem 0;
   padding: 1.25rem;
   background: var(--paper);
@@ -182,12 +185,30 @@ h3 { margin-top: 1.75rem; font-size: 1.25rem; }
 .week-summary { border-left: 4px solid var(--accent); }
 .week-summary p { margin: .35rem 0; }
 
-.week-grid {
+.week-grid,
+.method-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
-.week-card h3 { margin-top: 0; }
+.week-card h3,
+.method-card h2,
+.route-item h3 { margin-top: 0; }
+
+.method-card { border-left: 4px solid var(--slate); }
+.method-card ul { padding-left: 1.1rem; }
+.method-card li { margin: .35rem 0; }
+
+.route-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.route-item {
+  border-left: 4px solid var(--accent);
+}
+.route-item p:last-child { margin-bottom: 0; }
 
 .ladder-guide { border-left: 4px solid var(--slate); }
 .ladder-guide h2 { margin-top: 0; }
@@ -315,8 +336,12 @@ th { background: #ece6d8; color: var(--slate-dark); }
   .week-card,
   .ladder-guide,
   .campaign-card,
+  .method-card,
+  .route-item,
   .field-note { padding: 1rem; }
-  .week-grid { grid-template-columns: 1fr; }
+  .week-grid,
+  .method-grid,
+  .route-list { grid-template-columns: 1fr; }
   .campaign-table-wrap { display: none; }
   .campaign-card-list { display: block; }
   .footer-grid { grid-template-columns: 1fr; }
