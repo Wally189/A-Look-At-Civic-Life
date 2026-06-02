@@ -1,0 +1,23 @@
+{
+  "0": {
+    "eyebrow": "Current field note · Week 0",
+    "title": "Before the first question",
+    "lede": "The first test of a civic project is not whether it can sound grand. It is whether it can begin honestly, stay readable, and avoid becoming another noisy thing on the internet.",
+    "summary": [
+      ["Status", "Preparing"],
+      ["This week’s purpose", "Build the public method before making the first public ask."],
+      ["Public contact", "No public body has been contacted yet. Week 0 is about getting the rules, records and safeguards right."]
+    ],
+    "sections": [
+      {"heading": "What is being tested?", "paragraphs": ["A Look at Civic Life asks whether an ordinary person can take one public issue each week, read the official sources, find the proper route, ask one reasonable question and show what happened.", "Before that begins, the project needs a simple public structure: a website, a campaign tracker, a public log, a corrections route, and a clear promise not to turn civic persistence into harassment."]},
+      {"heading": "Why Week 0 matters", "paragraphs": ["Many good civic ideas fail because they begin with too much noise and too little method. Week 0 is deliberately unglamorous. It is the workbench week.", "The question is not yet whether a council, department, MP or public body will answer. The question is whether the citizen asking can be disciplined enough to ask properly.", "The point of Week 0 is to make the project trustworthy before it becomes active. The first public week will test whether official documents can be understood by ordinary people."]}
+    ],
+    "cards": [
+      {"heading": "What has been set up", "items": ["Public website skeleton created.", "52-week tracker added.", "Campaign log reserved for real public actions.", "Privacy, cookies, accessibility and terms pages added."]},
+      {"heading": "Before Week 1 begins", "items": ["Confirm the public email address.", "Polish the visual style page by page.", "Prepare the first public week.", "Write the first short video or audio script.", "Make sure every claim has a source."]}
+    ],
+    "field_note": "Because this is Week 0, the campaign log is still empty. It will only record real civic actions: questions asked, routes used, replies received and outcomes logged.",
+    "next_heading": "What comes next?",
+    "next_text": "The first public test will ask whether public documents can be made readable to ordinary citizens. That may sound small, but it is the foundation of the whole year. If people cannot understand the document, they cannot meaningfully question the decision."
+  }
+}
