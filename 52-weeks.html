@@ -4,22 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>52 Weeks Tracker — A Look at Civic Life</title>
+  <meta name="description" content="The 52-week civic ladder for A Look at Civic Life: from readable public documents to accountability, fair work, housing, transport, health and resilience.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-title">A Look at Civic Life</span><span class="brand-strand">52 Weeks for the Common Good</span></a><nav class="site-nav"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a aria-current="page" href="52-weeks.html">52 Weeks</a></li><li><a href="current-week.html">Current Week</a></li><li><a href="campaign-log.html">Campaign Log</a></li><li><a href="method.html">Method</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div></header>
-  <main class="main">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-title">A Look at Civic Life</span><span class="brand-strand">52 Weeks for the Common Good</span></a><nav class="site-nav" aria-label="Main navigation"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a aria-current="page" href="52-weeks.html">52 Weeks</a></li><li><a href="current-week.html">Current Week</a></li><li><a href="campaign-log.html">Campaign Log</a></li><li><a href="method.html">Method</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div></header>
+  <main id="main" class="main">
+    <p class="eyebrow">The year as a civic ladder</p>
     <h1>52 Weeks</h1>
-    <p class="lede">The year is arranged as a ladder: first make public life readable, then answerable, then fairer.</p>
-    <div class="document-panel">
-      <p>The tracker shows six weeks at a time so the whole year can be explored without becoming a wall of rows.</p>
-      <p><strong data-campaigns-count>52 weeks</strong> · <span data-campaigns-range>Loading…</span></p>
+    <p class="lede">The early weeks ask how ordinary people can understand public life. Later weeks follow money, work, housing, transport, health, justice and resilience.</p>
+
+    <section class="section ladder-guide" aria-labelledby="ladder-heading">
+      <h2 id="ladder-heading">The route through the year</h2>
+      <p>The 52 weeks are not arranged by moral importance. They are arranged as a ladder: first make public life readable, then answerable, then fairer.</p>
+      <ol class="ladder-layers">
+        <li><strong>Weeks 1–8:</strong> Readability, ownership, questions, consultations, information rights, procurement, AI and digital access.</li>
+        <li><strong>Weeks 9–16:</strong> Public money, poverty pay, fair contracts, secure hours, enforcement and progression.</li>
+        <li><strong>Weeks 17–24:</strong> Workplace dignity, occupational health, return-to-work safety, NHS administration and patient information.</li>
+        <li><strong>Weeks 25–32:</strong> Household survival: hardship schemes, advice, deductions, debt, essentials, fuel poverty and resilience.</li>
+        <li><strong>Weeks 33–40:</strong> Housing: registers, temporary accommodation, renting, rent subsidy, empty homes and supported housing.</li>
+        <li><strong>Weeks 41–48:</strong> Transport, non-driver rights, skills, retraining, local productivity, high streets and care.</li>
+        <li><strong>Weeks 49–52:</strong> Youth exclusion, prison release, probation resettlement and climate adaptation for ordinary homes.</li>
+      </ol>
+    </section>
+
+    <section class="section document-panel">
+      <p>The tracker shows six entries at a time. On mobile, each week appears as a field card rather than a squeezed spreadsheet.</p>
+      <p><strong data-campaigns-count>52 campaign weeks</strong> · <span data-campaigns-range>Loading…</span></p>
       <div class="tracker-controls" aria-label="52-week tracker controls">
         <button class="button secondary" type="button" data-campaigns-prev>Previous six</button>
         <button class="button" type="button" data-campaigns-next>Next six</button>
       </div>
-    </div>
-    <div class="table-wrap">
+    </section>
+
+    <div class="campaign-card-list" data-campaigns-cards aria-live="polite"></div>
+
+    <div class="table-wrap campaign-table-wrap">
       <table>
         <thead><tr><th>Week</th><th>Theme</th><th>Status</th><th>Reasonable ask</th><th>Workflow checked</th><th>Outcome</th></tr></thead>
         <tbody data-campaigns-table><tr><td colspan="6">Loading tracker…</td></tr></tbody>
