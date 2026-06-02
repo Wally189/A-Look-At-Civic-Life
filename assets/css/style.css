@@ -1,0 +1,187 @@
+:root {
+  --page: #f7f2e8;
+  --paper: #fffdf7;
+  --ink: #202124;
+  --muted: #5d6670;
+  --line: #d8d0c2;
+  --slate: #405466;
+  --slate-dark: #273946;
+  --accent: #6f7f5f;
+  --accent-soft: #e7eadf;
+  --burgundy: #7b4a4a;
+  --max: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--page);
+}
+
+img { max-width: 100%; height: auto; }
+
+a { color: var(--slate-dark); text-underline-offset: 0.18em; }
+a:hover { color: var(--burgundy); }
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--ink);
+  color: #fff;
+  padding: .5rem .75rem;
+  z-index: 10;
+}
+.skip-link:focus { left: .75rem; top: .75rem; }
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 253, 247, 0.92);
+}
+
+.header-inner,
+.main,
+.site-footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.brand { text-decoration: none; color: var(--ink); }
+.brand-title { display: block; font-size: 1.25rem; font-weight: 700; letter-spacing: .01em; }
+.brand-strand { display: block; font-size: .9rem; color: var(--muted); }
+
+.nav-toggle { display: none; }
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-nav a { font-size: .95rem; text-decoration: none; }
+.site-nav a[aria-current='page'] { font-weight: 700; border-bottom: 2px solid var(--accent); }
+
+.main { padding-top: 2rem; padding-bottom: 3rem; }
+
+.hero {
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 .5rem;
+  color: var(--burgundy);
+  font-size: .9rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+h1, h2, h3 { line-height: 1.2; color: var(--slate-dark); }
+h1 { max-width: 850px; margin: 0 0 1rem; font-size: clamp(2.15rem, 5vw, 4rem); }
+h2 { margin-top: 2.25rem; font-size: clamp(1.55rem, 3vw, 2.2rem); }
+h3 { margin-top: 1.75rem; font-size: 1.25rem; }
+
+.lede { max-width: 760px; font-size: 1.22rem; color: #2f3438; }
+.core-sentence {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: .85rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  font-weight: 700;
+}
+
+.section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.document-panel {
+  margin: 1.25rem 0;
+  padding: 1.25rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.promise-list,
+.plain-list { padding-left: 1.2rem; }
+.promise-list li { margin: .35rem 0; }
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 1.25rem;
+}
+
+.button {
+  display: inline-block;
+  padding: .7rem 1rem;
+  border: 1px solid var(--slate);
+  background: var(--slate-dark);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+.button.secondary { background: transparent; color: var(--slate-dark); }
+.button:hover { background: var(--burgundy); color: #fff; }
+
+.table-wrap { overflow-x: auto; margin: 1rem 0; }
+table { width: 100%; border-collapse: collapse; background: var(--paper); }
+th, td { padding: .75rem; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+th { background: #ece6d8; color: var(--slate-dark); }
+
+.status {
+  display: inline-block;
+  padding: .15rem .45rem;
+  border: 1px solid var(--line);
+  background: #f1eadc;
+  font-size: .9rem;
+}
+
+.notice {
+  border-left: 4px solid var(--burgundy);
+  background: #f3e9e6;
+  padding: 1rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 2fr 1fr;
+}
+
+@media (max-width: 760px) {
+  .header-inner { align-items: flex-start; flex-direction: column; }
+  .site-nav ul { display: block; }
+  .site-nav li { margin: .25rem 0; }
+  .main { padding-top: 1rem; }
+  .hero { padding-top: 1.5rem; }
+  .document-panel { padding: 1rem; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
