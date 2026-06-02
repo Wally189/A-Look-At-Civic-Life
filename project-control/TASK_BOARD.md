@@ -13,8 +13,8 @@ Working rule:
 | ID | Phase | Task | Target date | Status | Current next action |
 |---|---|---|---:|---|---|
 | ALCL-000 | Setup | Freeze master brief v0.1 | 2026-06-02 | Done | Use the frozen brief as the basis for the Codex skeleton task. |
-| ALCL-001 | Phase 1 — Build skeleton | Create project working structure in GitHub | 2026-06-03 | In progress | Add project-control files, task cards and week folders to this repo. |
-| ALCL-002 | Phase 1 — Build skeleton | Give Codex the first website skeleton instruction | 2026-06-03 | Not started | Open `project-control/03_CODEX_FIRST_TASK.md` and paste it into Codex. |
+| ALCL-001 | Phase 1 — Build skeleton | Create project working structure in GitHub | 2026-06-03 | Done | Project-control files, task cards and week folders have been added to this repo. |
+| ALCL-002 | Phase 1 — Build skeleton | Give Codex the first website skeleton instruction | 2026-06-03 | Next | Open `project-control/03_CODEX_FIRST_TASK.md` and paste it into Codex. |
 | ALCL-003 | Phase 1 — Build skeleton | Check Codex output folder structure | 2026-06-04 | Not started | Compare the Codex output against the required folder tree. |
 | ALCL-004 | Phase 1 — Build skeleton | Check first build visually | 2026-06-05 | Not started | Open the site locally and check desktop and phone-sized views. |
 | ALCL-005 | Phase 2 — Review and simplify | Review against no-card-soup rule | 2026-06-06 | Not started | Mark any over-designed cards, boxes, fake campaign panels or visual noise. |
