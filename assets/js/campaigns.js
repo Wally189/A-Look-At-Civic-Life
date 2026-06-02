@@ -15,11 +15,15 @@ function campaignLayer(week) {
   return 'Justice, resettlement and resilience';
 }
 
+function campaignUrl(item) {
+  return `week.html?week=${Number(item.week)}`;
+}
+
 function campaignRow(item) {
   return `
     <tr>
       <td>${item.week}</td>
-      <td><a href="${item.url}">${item.title}</a></td>
+      <td><a href="${campaignUrl(item)}">${item.title}</a></td>
       <td>${item.status}</td>
       <td>${item.reasonable_ask}</td>
       <td>${item.existing_workflow_checked}</td>
@@ -32,7 +36,7 @@ function campaignCard(item) {
   return `
     <article class="campaign-card">
       <p class="campaign-card-week">Week ${item.week}</p>
-      <h2><a href="${item.url}">${item.title}</a></h2>
+      <h2><a href="${campaignUrl(item)}">${item.title}</a></h2>
       <p><strong>Layer:</strong> ${campaignLayer(Number(item.week))}</p>
       <p><strong>Status:</strong> ${item.status}</p>
       <p><strong>Reasonable ask:</strong><br>${item.reasonable_ask}</p>
@@ -78,8 +82,8 @@ async function renderCampaigns() {
 
     if (tableTarget) tableTarget.innerHTML = visible.map(campaignRow).join('');
     if (cardTarget) cardTarget.innerHTML = visible.map(campaignCard).join('');
-    if (count) count.textContent = `${campaigns.length} campaign weeks`;
-    if (range) range.textContent = `Showing ${start + 1}–${end} of ${campaigns.length}`;
+    if (count) count.textContent = 'Week 0 + 52 campaign weeks';
+    if (range) range.textContent = `Showing ${start + 1}–${end} of ${campaigns.length} entries`;
     if (previous) previous.disabled = currentPage === 0;
     if (next) next.disabled = currentPage >= totalPages - 1;
   }
