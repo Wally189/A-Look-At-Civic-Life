@@ -1,14 +1,2 @@
 [
-  {
-    "date": "2026-06-02",
-    "week": 0,
-    "issue": "Project setup",
-    "action_type": "Preparation",
-    "person_or_organisation": "Project repo",
-    "route_used": "GitHub",
-    "summary": "Created the project-control structure, task board, starter week folders and first website skeleton files.",
-    "status": "In progress",
-    "next_step": "Finish the static website skeleton and check the GitHub Pages preview.",
-    "publishable": true
-  }
 ]
