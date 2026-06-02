@@ -113,14 +113,47 @@ h3 { margin-top: 1.75rem; font-size: 1.25rem; }
   padding-top: 1rem;
 }
 
+.about-article,
 .intro-note,
 .accountability-note,
 .week-article {
   max-width: 860px;
 }
 
+.article-summary,
+.article-contents,
+.rhythm-panel,
 .accountability-note {
+  margin: 1.25rem 0;
   padding: 1.1rem 1.25rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.article-summary {
+  border-left: 4px solid var(--accent);
+  font-size: 1.05rem;
+}
+
+.article-contents {
+  background: #f3eddf;
+}
+
+.article-contents p { margin: 0 0 .45rem; }
+.article-contents ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  columns: 2;
+}
+.article-contents li { break-inside: avoid; margin: .2rem 0; }
+
+.rhythm-panel {
+  border-left: 4px solid var(--slate);
+}
+.rhythm-panel ol { margin-bottom: 0; padding-left: 1.2rem; }
+.rhythm-panel li { margin: .35rem 0; }
+
+.accountability-note {
   border-left: 4px solid var(--burgundy);
   background: #f3e9e6;
 }
@@ -252,7 +285,11 @@ th { background: #ece6d8; color: var(--slate-dark); }
   h1 { font-size: clamp(2rem, 11vw, 3.15rem); }
   h2 { font-size: clamp(1.6rem, 8vw, 2.25rem); }
   .lede { font-size: 1.12rem; }
+  .article-contents ul { columns: 1; }
   .document-panel,
+  .article-summary,
+  .article-contents,
+  .rhythm-panel,
   .week-summary,
   .week-card { padding: 1rem; }
   .week-grid { grid-template-columns: 1fr; }
