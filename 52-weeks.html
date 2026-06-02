@@ -30,7 +30,7 @@
     </section>
 
     <section class="section document-panel">
-      <p>The tracker shows six entries at a time. On mobile, each week appears as a field card rather than a squeezed spreadsheet.</p>
+      <p>The tracker shows six entries at a time. Each week appears as a field card so the year can be explored without becoming a spreadsheet.</p>
       <p><strong data-campaigns-count>52 campaign weeks</strong> · <span data-campaigns-range>Loading…</span></p>
       <div class="tracker-controls" aria-label="52-week tracker controls">
         <button class="button secondary" type="button" data-campaigns-prev>Previous six</button>
@@ -38,14 +38,7 @@
       </div>
     </section>
 
-    <div class="campaign-card-list" data-campaigns-cards aria-live="polite"></div>
-
-    <div class="table-wrap campaign-table-wrap">
-      <table>
-        <thead><tr><th>Week</th><th>Theme</th><th>Status</th><th>Reasonable ask</th><th>Workflow checked</th><th>Outcome</th></tr></thead>
-        <tbody data-campaigns-table><tr><td colspan="6">Loading tracker…</td></tr></tbody>
-      </table>
-    </div>
+    <div class="campaign-card-list always-show" data-campaigns-cards aria-live="polite"></div>
   </main>
   <footer class="site-footer"><p>A Look at Civic Life — independent, non-party and evidence-led.</p></footer>
   <script src="assets/js/campaigns.js"></script>
