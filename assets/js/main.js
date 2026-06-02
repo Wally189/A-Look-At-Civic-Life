@@ -16,6 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
       </nav>
       <p class="footer-note">A small independent civic project by Alan Gallagher. Site support by Waylight Atlantic.</p>
     `;
-    footer.appendChild(links);
+    footer.insertBefore(links, footer.firstChild);
   }
 });
