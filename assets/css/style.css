@@ -164,7 +164,9 @@ h3 { margin-top: 1.75rem; font-size: 1.25rem; }
 
 .document-panel,
 .week-summary,
-.week-card {
+.week-card,
+.ladder-guide,
+.campaign-card {
   margin: 1.25rem 0;
   padding: 1.25rem;
   background: var(--paper);
@@ -187,6 +189,49 @@ h3 { margin-top: 1.75rem; font-size: 1.25rem; }
 
 .week-card h3 {
   margin-top: 0;
+}
+
+.ladder-guide {
+  border-left: 4px solid var(--slate);
+}
+
+.ladder-guide h2 {
+  margin-top: 0;
+}
+
+.ladder-layers {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.ladder-layers li {
+  margin: .45rem 0;
+}
+
+.campaign-card-list {
+  display: none;
+}
+
+.campaign-card {
+  border-left: 4px solid var(--accent);
+}
+
+.campaign-card-week {
+  margin: 0 0 .25rem;
+  color: var(--burgundy);
+  font-size: .85rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.campaign-card h2 {
+  margin-top: 0;
+  font-size: 1.55rem;
+}
+
+.campaign-card p {
+  margin: .55rem 0;
 }
 
 .promise-list,
@@ -291,8 +336,12 @@ th { background: #ece6d8; color: var(--slate-dark); }
   .article-contents,
   .rhythm-panel,
   .week-summary,
-  .week-card { padding: 1rem; }
+  .week-card,
+  .ladder-guide,
+  .campaign-card { padding: 1rem; }
   .week-grid { grid-template-columns: 1fr; }
+  .campaign-table-wrap { display: none; }
+  .campaign-card-list { display: block; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-links nav { display: block; }
   .footer-links a { display: inline-block; margin: 0 .75rem .35rem 0; }
