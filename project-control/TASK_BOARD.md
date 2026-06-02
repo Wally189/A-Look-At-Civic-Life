@@ -15,8 +15,8 @@ Working rule:
 | ALCL-000 | Setup | Freeze master brief v0.1 | 2026-06-02 | Done | Use the frozen brief as the basis for the website skeleton. |
 | ALCL-001 | Phase 1 — Build skeleton | Create project working structure in GitHub | 2026-06-03 | Done | Project-control files, task cards and week folders have been added to this repo. |
 | ALCL-002 | Phase 1 — Build skeleton | Build first static website skeleton directly in GitHub | 2026-06-03 | Done | Static pages, CSS, JS and JSON tracker/log files have been added. |
-| ALCL-003 | Phase 1 — Build skeleton | Check website output folder structure | 2026-06-04 | Next | Compare the GitHub output against the required folder tree and check the Pages link. |
-| ALCL-004 | Phase 1 — Build skeleton | Check first build visually | 2026-06-05 | Not started | Open the site on mobile and check readability, tone and navigation. |
+| ALCL-003 | Phase 1 — Build skeleton | Check website output folder structure | 2026-06-04 | Done | GitHub Pages works, main pages load, footer works, tracker works, and campaign log now contains campaign actions only. |
+| ALCL-004 | Phase 1 — Build skeleton | Check first build visually | 2026-06-05 | Next | Open the site on mobile and check readability, tone and navigation. |
 | ALCL-005 | Phase 2 — Review and simplify | Review against no-card-soup rule | 2026-06-06 | Not started | Mark any over-designed cards, boxes, fake campaign panels or visual noise. |
 | ALCL-006 | Phase 2 — Review and simplify | Check tracker and campaign log | 2026-06-07 | Not started | Check that `campaigns.json` and `log.json` render correctly on the public pages. |
 | ALCL-007 | Phase 3 — Core pages | Draft Home, About and Method pages | 2026-06-11 | Not started | Bring the page text back to ChatGPT for tightening after the first visual review. |
