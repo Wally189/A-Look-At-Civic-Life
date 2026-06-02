@@ -124,7 +124,8 @@ h3 { margin-top: 1.75rem; font-size: 1.25rem; }
 .plain-list { padding-left: 1.2rem; }
 .promise-list li { margin: .35rem 0; }
 
-.action-row {
+.action-row,
+.tracker-controls {
   display: flex;
   flex-wrap: wrap;
   gap: .75rem;
@@ -138,10 +139,17 @@ h3 { margin-top: 1.75rem; font-size: 1.25rem; }
   background: var(--slate-dark);
   color: #fff;
   text-decoration: none;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: .95rem;
   font-weight: 700;
+  cursor: pointer;
 }
 .button.secondary { background: transparent; color: var(--slate-dark); }
-.button:hover { background: var(--burgundy); color: #fff; }
+.button:hover:not(:disabled) { background: var(--burgundy); color: #fff; }
+.button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
 
 .table-wrap { overflow-x: auto; margin: 1rem 0; }
 table { width: 100%; border-collapse: collapse; background: var(--paper); }
